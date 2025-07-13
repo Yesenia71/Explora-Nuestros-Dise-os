@@ -1,0 +1,107 @@
+/* Custom styles for the showcase */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8; /* Light blue-gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50; /* Dark blue-gray for text */
+}
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 25px;
+    width: 100%;
+    padding: 20px 0;
+}
+.design-card {
+    background-color: #ecf0f1; /* Light gray card background */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.design-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.design-card img {
+    width: 100%;
+    height: 180px; /* Fixed height for image previews */
+    object-fit: cover;
+    border-bottom: 1px solid #bdc3c7; /* Subtle separator */
+}
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.card-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #34495e; /* Medium dark blue-gray */
+    margin-bottom: 10px;
+}
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+.card-content a {
+    display: inline-block;
+    background-color: #3498db; /* Blue button */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.card-content a:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    .design-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+    .card-content h3 {
+        font-size: 1.15rem;
+    }
+    .card-content p {
+        font-size: 0.9rem;
+    }
+}
